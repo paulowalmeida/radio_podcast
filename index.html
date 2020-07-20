@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rádio Podcast - IGTI</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Rádio Podcast IGTI</h1>
+      <div>
+        <h2 id="frequencyRadio"></h2>
+      </div>
+      <div>
+        <input type="button" class="buttons" id="down" value="<">
+        <span>87.5Mhz</span>
+        <input type="range" min="87.5" max="108" id="rangeRadio" step="0.1" value="88.7"/>
+        <span>108 Mhz</span>
+        <input type="button" class="buttons" id="up" value=">">
+        <div id="displayPodcast"></div>
+      </div>
+    </div>
+
+    <a href="https://github.com/pwneo"><h3>Criado por Paulo W. A. Ferreira</h3></a>
+    <script defer src="./js/podcasts.js"></script>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
