@@ -5,7 +5,6 @@ const buttonUp = document.querySelector('#up');
 const buttonDown = document.querySelector('#down');
 
 const img = document.createElement('img');
-img.setAttribute('id', 'image');
 const description = document.createElement('p');
 const audio = document.createElement('audio');
 
@@ -20,9 +19,12 @@ imgNotFound.alt = 'Não Encontrado';
 
 function start() {
   console.log('DOM carregado!');
+  
   frequencyRadio.textContent = `${radioRange.value} Mhz`;
+  
   displayPodcast.appendChild(message);
   displayPodcast.appendChild(imgNotFound);  
+  
   radioRange.addEventListener('input', handlerRangeValueChange);
 
   buttonDown.addEventListener('click', () =>{
@@ -85,7 +87,7 @@ function renderFound(foundPodcast) {
   displayPodcast.appendChild(audio);
 }
 
-function rederNotFound(){
+function renderNotFound(){
   if (displayPodcast.childNodes.length === 2) {
     displayPodcast.appendChild(message);
     displayPodcast.appendChild(imgNotFound);
